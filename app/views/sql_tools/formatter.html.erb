@@ -1,0 +1,48 @@
+<div class="container">
+  <div>
+    <h3>Where-clause formatter</h3>
+  </div>
+  <br>
+  <form id="list-input-form">
+    <div class="row">
+      <div class="formfield col-sm-5">
+        <input type="text" name="list-1-header" placeholder="List 1 Header">
+        <select name="list-1-comparitor" onchange="toggleTextArea(this, 'list-1-textarea')">
+          <option value="=">=</option>
+          <option value=">">&#62</option>
+          <option value="<">&#60</option>
+          <option value="<>">&#60&#62</option>
+          <option value="IS NULL">IS NULL</option>
+          <option value="IS NOT NULL">IS NOT NULL</option>
+        </select>
+        <textarea id="list-1-textarea" name="list-1-body" style="height:400px;"></textarea>
+      </div>
+      <div class="formfield col-sm-1">
+        <div style="margin-top:175px;">
+          <input type="radio" name="conjunction" value="and" checked> and <br>
+          <input type="radio" name="conjunction" value="or"> or
+        </div>
+      </div>
+      <div class="formfield col-sm-5">
+        <input type="text" name="list-2-header" placeholder="List 2 Header">
+        <select name="list-2-comparitor" onchange="toggleTextArea(this, 'list-2-textarea')">
+          <option value="=">=</option>
+          <option value=">">&#62</option>
+          <option value="<">&#60</option>
+          <option value="<>">&#60&#62</option>
+          <option value="IS NULL">IS NULL</option>
+          <option value="IS NOT NULL">IS NOT NULL</option>
+        </select>
+        <textarea id = "list-2-textarea" name="list-2-body" style="height:400px;"></textarea>
+      </div>
+    </div>
+  </form>
+  <br>
+  <button onclick="listFn()">Show</button>
+  <br>
+  <br>
+  <div>
+    <button onclick="clearOutput()">Clear Output</button>
+  </div>
+  <div id="output"></div>
+</div>
