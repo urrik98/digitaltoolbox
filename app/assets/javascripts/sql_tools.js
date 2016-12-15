@@ -49,3 +49,23 @@ function toggleTextArea(element, textareaId) {
     document.getElementById(textareaId).value = "";
   }
 }
+
+function listDBTables(element){
+  $("#db1_table1").empty();
+  var db = element.value;
+  var tables = db_tables[db];
+  tables.forEach(function(table) {
+    var $option = "<option value="+table+">"+table+"</option>";
+    $('#db1_table1').append($option);
+  })
+
+}
+
+var db_tables = {
+  'epic':['','attack','v_basic_data_dump', 'v_data_dump_for_analysis'],
+  'temp':['','hla_forefront'],
+  'subjects':['','_querytable'],
+  'origins':[''],
+  'msgenlabprod':[''],
+  'cohorts':['']
+}

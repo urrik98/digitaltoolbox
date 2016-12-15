@@ -1,9 +1,33 @@
 <div class="container">
   <div>
-    <h3>Where-clause formatter</h3>
+    <h3>SQL Query formatter</h3>
   </div>
   <br>
   <form id="list-input-form">
+    <div class="row">
+      <div class="col-sm-2">
+        <input type="radio" name="select" value="SELECT" checked> SELECT <br>
+        <input type="radio" name="select" value="SELECT DISTINCT"> SELECT DISTINCT
+      </div>
+      <div class="col-sm-3">
+        <label for="db1">choose database</label>
+        <select name="db1" onchange="listDBTables(this)">
+          <option></option>
+          <option value="epic">epic</option>
+          <option value="origins">origins</option>
+          <option value="msgenlabprod">msgenlabprod</option>
+          <option value="subjects">subjects</option>
+          <option value="cohorts">cohorts</option>
+          <option value="temp">temp</temp>
+        </select>
+      </div>
+      <div class="col-sm-4">
+        <label for="db1_table1">choose table</label>
+        <select name="db1_table1" id="db1_table1">
+          <option></option>
+        </select>
+      </div>
+    </div>
     <div class="row">
       <div class="formfield col-sm-5">
         <input type="text" name="list-1-header" placeholder="List 1 Header">
